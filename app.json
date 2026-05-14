@@ -2,7 +2,13 @@
   "name": "RexBots File-to-Link Bot",
   "description": "Telegram File-to-Link streaming bot with web server. Deploy and configure via environment variables.",
   "logo": "https://i.imgur.com/your-logo.png",
-  "keywords": ["telegram", "bot", "python", "pyrogram", "file-to-link"],
+  "keywords": [
+    "telegram",
+    "bot",
+    "python",
+    "pyrogram",
+    "file-to-link"
+  ],
   "repository": "https://github.com/YOUR_USERNAME/YOUR_REPO",
   "stack": "container",
   "formation": {
@@ -49,8 +55,8 @@
       "description": "Your bot's username WITHOUT the @ symbol",
       "required": true
     },
-    "FQDN": {
-      "description": "Your custom Cloudflare domain for stream links (e.g. stream.yourdomain.com). Leave blank to auto-use Heroku URL.",
+    "WEB_SERVER_BIND_ADDRESS": {
+      "description": "Your Heroku app hostname (e.g. myapp.herokuapp.com). Used to build stream link URLs. Set this to your app name + .herokuapp.com if not using a custom domain.",
       "required": false
     },
     "HAS_SSL": {
